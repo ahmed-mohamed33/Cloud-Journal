@@ -1,0 +1,130 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Post 1",
+      "content": "Content of post 1 lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "summary": "Summary of post 1",
+      "image": "https://picsum.photos/2500/1667",
+      "createdAt": "2025/03/20",
+      "author": "Ahmed Selim",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Post 2",
+      "content": "I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.I've heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight. amet consectetur adipisicing elit. Quisquam, quos.",
+      "summary": "Summary of post 2",
+      "image": "https://picsum.photos/2500/1667",
+      "createdAt": "2025/03/20",
+      "author": "Ahmed Selim",
+      "userId": "1"
+    },
+    {
+      "id": "3",
+      "title": "Post 3",
+      "content": "Content of post 3 lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "summary": "Summary of post 3",
+      "image": "https://picsum.photos/2500/1667",
+      "createdAt": "2025/03/20",
+      "author": "Ahmed Selim",
+      "userId": "1"
+    },
+    {
+      "id": "4",
+      "title": "Post 4",
+      "content": "Content of post 4 lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos .",
+      "summary": "Summary of post 4",
+      "image": "https://picsum.photos/2500/1667",
+      "createdAt": "2025/03/20",
+      "author": "Ahmed Selim",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Post 5",
+      "content": "Content of post 5 lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "summary": "Summary of post 5",
+      "image": "https://picsum.photos/2500/1667",
+      "createdAt": "2025/03/20",
+      "author": "Ahmed Selim",
+      "userId": "1"
+    },
+    {
+      "id": "6",
+      "title": "Post 6",
+      "content": "Content of post 6 lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "summary": "Summary of post 6",
+      "image": "https://picsum.photos/2500/1667",
+      "createdAt": "2025/03/20",
+      "author": "Ahmed Selim",
+      "userId": "1"
+    },
+    {
+      "id": "7",
+      "title": "Post 7",
+      "content": "Content of post 7 lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "summary": "Summary of post 7",
+      "image": "https://picsum.photos/2500/1667",
+      "createdAt": "2025/03/20",
+      "author": "Ahmed Selim",
+      "userId": "1"
+    },
+    {
+      "id": "e9ac",
+      "title": "dfdsfsdf",
+      "content": "sdfsdf",
+      "summary": "dsfsdfsdf",
+      "image": "https://picsum.photos/2500/1667",
+      "author": "Ahmed Selim",
+      "createdAt": "2025-06-14T13:55:10.762Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Ahmed Selim",
+      "email": "john@example.com"
+    },
+    {
+      "email": "a7medselim93@gmail.com",
+      "password": "$2a$10$MinVnGdMAM.Fcg29cO67luRyUlLK/zDu90DzBTIJauXe.WIXn6De.",
+      "name": "ahmed mohamed",
+      "id": "WL5na6K"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": 1,
+      "content": "Great post!",
+      "username": "Alice",
+      "userId": 1,
+      "isAnonymous": false
+    },
+    {
+      "id": "2",
+      "postId": 1,
+      "content": "Very informative.",
+      "username": "Anonymous",
+      "userId": null,
+      "isAnonymous": true
+    },
+    {
+      "id": "d047",
+      "postId": "1",
+      "content": "gh",
+      "username": "Anonymous",
+      "userId": null,
+      "isAnonymous": true
+    },
+    {
+      "id": "e44c",
+      "postId": "4",
+      "content": "ahmed",
+      "username": "Ahmed",
+      "userId": null,
+      "isAnonymous": false
+    }
+  ]
+}
