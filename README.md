@@ -1,5 +1,6 @@
-# Cloud Journal
-img
+# ☁️ Cloud Journal - A Portal To Your Cloud Of Thoughts
+![Screenshot 2025-06-14 214405](https://github.com/user-attachments/assets/79250274-0f32-49d0-afca-12ad9b514367)
+
 ## 📖 About
 Cloud Journal is a web application designed to help users manage their notes and journals in the cloud. It provides a user-friendly interface and various features to organize and access your notes from anywhere.
 
