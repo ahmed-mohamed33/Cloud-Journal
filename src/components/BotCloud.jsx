@@ -11,7 +11,7 @@ const BotCloud = () => {
                     objectFit: "cover",
                     objectPosition: "center",
                     backgroundColor: '#a0d4ee',
-                    borderRadius: 2,
+                  
                     borderBottom: 'none',
                     display: "block",
                     m: 0,

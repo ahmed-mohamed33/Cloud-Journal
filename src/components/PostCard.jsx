@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardMedia, CardContent, CardActions, Typography, Button, IconButton, Avatar } from '@mui/material';
 import postCloud from '../assets/Postcloud.svg';
 import { toast ,ToastContainer } from 'react-toastify';
@@ -6,44 +6,26 @@ import { Link, useNavigate } from 'react-router-dom';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
+import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
+
 const PostCard = (props) => {
-  const { title, content, summary, image ,id ,author} = props;
+  const { title, content, summary, image, id, author, userId, onShare, onEdit, onDelete } = props;
 
-  const handleShare = async () => {
-    try {
-      await navigator.clipboard.writeText(`http://localhost:3000/post/${id}`);
-      toast.success('Link copied to clipboard', {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        theme: "colored",
-        style: {
-          background: "#a0d4ee",
-          color: '#fff'
-        },
-        draggable: true,
-      });
-    } catch (err) {
-      toast.error('Failed to copy link', {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        theme: "colored",
-        draggable: true,
-      });
-    }
-  };
-  const handleEdit = () => {
-    navigate(`/edit/${id}`);  
-  };
-  const handleDelete = () => {
+  const [open, setOpen] = useState(false);
 
-    navigate(`/delete/${id}`);
+  const handleClickOpen = () => {
+    setOpen(true);
   };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleConfirmDelete = () => {
+    onDelete(id, userId);
+    handleClose();
+  };
+
   return (
     <Card 
       sx={{
@@ -78,18 +60,53 @@ const PostCard = (props) => {
       </CardContent>
       <CardActions sx={{display: 'flex', justifyContent: 'space-between'}}>
         <Link to={`/post/${id}`}><Button size="small"  sx={{color: 'black' ,fontWeight: 'bold'}} >Read More</Button></Link>
-        <Button size="small"  sx={{color: 'black' ,fontWeight: 'bold'}} onClick={handleShare}>Share</Button>
-        <IconButton onClick={handleEdit} sx={{color: 'black'}}>
+        <Button size="small"  sx={{color: 'black' ,fontWeight: 'bold'}} onClick={() => onShare(id)}>Share</Button>
+        { userId === localStorage.getItem('userId') && (
+          <>
+          <IconButton onClick={() => onEdit(id, userId)} sx={{color: 'black'}}>
           <EditIcon />
         </IconButton>
-        <IconButton onClick={handleDelete} sx={{color: 'black'}}>
-          <DeleteIcon />
-        </IconButton>
+         <IconButton onClick={handleClickOpen} sx={{color: 'black'}}>
+         <DeleteIcon />
+       </IconButton>
+       </>
+        )}
+     
         <Typography variant="body2" color="black">
           <HistoryEduIcon />
           {author}
         </Typography>
       </CardActions>
+
+      <Dialog
+        open={open}
+        keepMounted
+        onClose={handleClose}
+        aria-describedby="alert-dialog-slide-description"
+        sx={{
+          '& .MuiDialog-paper': {
+            borderRadius: 2,
+            boxShadow: 3,
+            backgroundColor: '#f0f0f0',
+            color: 'black',
+            fontWeight: 'bold',
+            fontSize: '1.2rem',
+            textAlign: 'center',
+            padding: '20px',
+          },
+        }}
+      >
+        <DialogTitle>{"Confirm Deletion"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-slide-description" sx={{color: 'black'}}>
+            Are you sure you want to delete this post?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button sx={{color: 'black'}} onClick={handleClose}>Cancel</Button>
+          <Button sx={{color: 'red'}} onClick={handleConfirmDelete}>Delete</Button>
+        </DialogActions>
+      </Dialog>
     </Card>
   );
 };

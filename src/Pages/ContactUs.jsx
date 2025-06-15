@@ -1,10 +1,13 @@
 import React from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
-import CustomWave from './Footer';
-import bottomwave from '../assets/bottomwave.svg';
+import Home from '../components/Home';
+import BotCloud from '../components/BotCloud';
 
 const ContactUs = ({ theme }) => {
-  return (
+  return ( 
+    <>
+    <Box sx={{backgroundColor: 'white ' ,width: '100%', height: '100px' }}/>
+   <BotCloud/>
     <Box sx={{ position: 'relative' ,display: 'flex', flexDirection: 'column', gap: 1 , justifyContent: 'center', alignItems: 'center' }}>
     <Box sx={{  padding: '10px', color: '#fff', textAlign: 'center' ,width: '100%' }}>
     
@@ -55,6 +58,7 @@ const ContactUs = ({ theme }) => {
       
     </Box>
     </Box>
+    </>
   );
 };
 

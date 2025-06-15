@@ -1,39 +1,56 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
 import Home from './Home';
 import BotCloud from './BotCloud';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useForm, Controller } from 'react-hook-form';
 import { signInValidationSchema } from '../utils/Validation';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthContext';
 const SignInPage = ({ theme }) => {
   const { control, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(signInValidationSchema),
   });
+  const { setIsAuthenticated , isAuthenticated} = useContext(AuthContext);
+  const navigate = useNavigate();
 const handleSignIn = (data) => {
- axios.post('http://localhost:3001/signin', {
-  email: data.email,
-  password: data.password
- })
- .then(response => {
-  toast.success('Sign in successful');
-  console.log(response.data);
-  localStorage.setItem('token', response.data.accessToken);
-  console.log(localStorage.getItem('token'));
-
- })
- .catch(error => {
-  const errorMessage = error.response ? error.response.data : 'An error occurred';
-  toast.error('Sign in failed: ' + errorMessage);
-});
+  axios.post('http://localhost:3001/signin', {
+    email: data.email,
+    password: data.password
+  })
+  .then(response => {
+    toast.success('Logged in successfully', {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      theme: "colored",
+      style: {
+        background: "#a0d4ee",
+        color: '#fff'
+      },
+      draggable: true,
+    });
+    localStorage.setItem('token', response.data.accessToken);
+    localStorage.setItem('userId', response.data.user.id);
+    localStorage.setItem('userName', response.data.user.name);
+    setIsAuthenticated(true); 
+   
+  })
+  .catch(error => {
+    const errorMessage = error.response ? error.response.data : 'An error occurred';
+    toast.error('Sign in failed: ' + errorMessage);
+  });
 }
 
   
 
   return (
+    isAuthenticated ? <Navigate to="/" /> :
     <>
     <Home/>
     <Box sx={{backgroundColor: 'white', width: '100%', marginTop: '64px' }}>

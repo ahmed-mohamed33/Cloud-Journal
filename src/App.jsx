@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ContactUs from './components/ContactUs'
+import ContactUs from './Pages/ContactUs'
 import Navbar from './components/Navbar'
 import BlogPost from './components/BlogPost';
 import BlogList from './components/BlogList';
@@ -11,6 +11,7 @@ import SignUpPage from './components/SignUpPage';
 import { ToastContainer } from 'react-toastify';
 import AddPost from './Pages/AddPost';
 import FloatingPostBtn from './components/FloatingPostBtn';
+import Projects from './Pages/Projects';
 
 const theme = createTheme({
   palette: {
@@ -99,12 +100,15 @@ function App() {
     <Routes>
   <Route path="/" element={<BlogList   />} />
   <Route path="/post/:id" element={<BlogPost theme={theme} />} />
-  <Route path="/signin" element={<SignInPage theme={theme} />} />
+  <Route path="/signin" element={<SignInPage theme={theme}  />} />
   <Route path="/signup" element={<SignUpPage theme={theme} />} />
-  <Route path="/addpost" element={<AddPost theme={theme} />} />
+  <Route path="/addpost" element={<AddPost theme={theme}  />} />
+  <Route path="/addpost/:edit/:id" element={<AddPost theme={theme}  />} />
+  <Route path="/projects" element={<Projects theme={theme} />} />
+  <Route path="/contact" element={<ContactUs theme={theme} />} />
 </Routes>
 
-<ContactUs theme={theme} />
+
 <FloatingPostBtn /> 
 </Router>
 <Footer />

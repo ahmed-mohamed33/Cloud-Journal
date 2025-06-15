@@ -13,7 +13,7 @@ const SignUpPage = ({ theme }) => {
   const { control, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(signUpValidationSchema),
   });
-
+  const navigate = useNavigate();
   const handleSignUp = (data) => {
     axios.post('http://localhost:3001/signup', {
       name: data.name,
@@ -22,11 +22,35 @@ const SignUpPage = ({ theme }) => {
       
     })
     .then(response => {
-      toast.success('Sign up successful');
-      navigate('/signin');
+      toast.success('Sign up successful', {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        theme: "colored",
+        style: {
+          background: "#a0d4ee",
+          color: '#fff'
+        },
+        draggable: true,
+      });
+      navigate ('/signin');
     })
     .catch(error => {
-      toast.error('Sign up failed '+error.response.data);
+      toast.error('Sign up failed '+error.response.data, {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        theme: "colored",
+        style: {
+          background: "#ff0000",
+          color: '#fff'
+        },
+        draggable: true,
+      });
     })
   };
 

@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { useNavigate } from 'react-router-dom';
-
+import { AuthContext } from '../Context/AuthContext';
+import { toast } from 'react-toastify';
 const FloatingPostBtn = () => {
   const navigate = useNavigate();
+  const { isAuthenticated } = useContext(AuthContext);
 
   const handleClick = () => {
+    if (!isAuthenticated) {
+      toast.error('Please login to add a post', {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        theme: "colored",
+        style: {
+          background: "#ff0000",
+          color: '#fff'
+        },
+        draggable: true,
+      }); 
+      navigate('/signin');
+      return;
+    }
     navigate('/addpost');
   };
 

@@ -1,14 +1,14 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "Post 1",
+      "title": "Ahmed",
       "content": "Content of post 1 lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
       "summary": "Summary of post 1",
       "image": "https://picsum.photos/2500/1667",
-      "createdAt": "2025/03/20",
-      "author": "Ahmed Selim",
-      "userId": "1"
+      "author": "ahmed mohamed",
+      "createdAt": "2025-06-15T12:47:38.427Z",
+      "id": "1",
+      "userId": "WL5na6K"
     },
     {
       "id": "2",
@@ -77,7 +77,18 @@
       "summary": "dsfsdfsdf",
       "image": "https://picsum.photos/2500/1667",
       "author": "Ahmed Selim",
-      "createdAt": "2025-06-14T13:55:10.762Z"
+      "createdAt": "2025-06-14T13:55:10.762Z",
+      "userId": "1"
+    },
+    {
+      "title": "aedfedfsfsd",
+      "content": "fdsfsdfsdf",
+      "summary": "sdfsdfsdf",
+      "image": "dsfdsfsdfdsf",
+      "author": "test",
+      "userId": "LV2bbNv",
+      "createdAt": "2025-06-15T13:33:07.145Z",
+      "id": "zub4ldW"
     }
   ],
   "users": [
@@ -91,6 +102,36 @@
       "password": "$2a$10$MinVnGdMAM.Fcg29cO67luRyUlLK/zDu90DzBTIJauXe.WIXn6De.",
       "name": "ahmed mohamed",
       "id": "WL5na6K"
+    },
+    {
+      "email": "admin@example.com",
+      "password": "$2a$10$yWWBUKmQEgtpYazbu2FizOsUEKomduor4W9IzdKM2olKoz1wtaYmW",
+      "name": "Ahmed Selim",
+      "id": "ubo5UWf"
+    },
+    {
+      "email": "admin@examplee.com",
+      "password": "$2a$10$81OPITeIqW37hkTEr4ifOOU1fGTX9g4RHdD3V/aAiQxD6w.djzJUm",
+      "name": "Ahmed Selim",
+      "id": "TlQHfFX"
+    },
+    {
+      "email": "admin@exampleee.com",
+      "password": "$2a$10$h9s3k9rB535Ne8V32nTNIuPxLgya6RrGpdFiOhKKbzjKvePKQnvG2",
+      "name": "Ahmed Selim",
+      "id": "RynP_d0"
+    },
+    {
+      "email": "admin@exampleeee.com",
+      "password": "$2a$10$iiMNaRD70.UQGvUS.Bt2tetIE/N/r6CItX8ldRUjFbUNfqgqRBaFy",
+      "name": "Ahmed Selim",
+      "id": "2Ak3W9L"
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$FScJjLJRrS/DnTwN1pC1JuhFhjJUNQMPUkudBKm.54mfgqtL4Z5r2",
+      "name": "test",
+      "id": "LV2bbNv"
     }
   ],
   "comments": [
