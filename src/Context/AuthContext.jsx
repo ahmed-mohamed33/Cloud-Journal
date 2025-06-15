@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -23,6 +24,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('token');
     setIsAuthenticated(false);
+
     toast.success('Logged out successfully', {
         position: "bottom-right",
         autoClose: 3000,
@@ -36,6 +38,7 @@ export const AuthProvider = ({ children }) => {
         },
         draggable: true,
       });
+
   };
 
   return (

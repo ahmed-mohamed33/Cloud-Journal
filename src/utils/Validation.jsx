@@ -18,5 +18,7 @@ export const addPostValidationSchema = yup.object().shape({
   title: yup.string().required('Title is required'),
   content: yup.string().min(10, 'Content must be at least 10 words').required('Content is required'),
   summary: yup.string().min(10, 'Summary must be at least 10 words').required('Summary is required'),
-  image: yup.string().required('Image is required'),
+  image: yup.string()
+    .url('Must be a valid URL')
+    .required('Image URL is required'),
 });

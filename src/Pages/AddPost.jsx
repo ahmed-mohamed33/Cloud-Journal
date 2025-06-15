@@ -1,36 +1,40 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { Box, Typography, TextField, Button, Container } from '@mui/material';
+import React, { useContext, useEffect } from 'react';
+import { Box, Typography, TextField, Button } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import BotCloud from '../components/BotCloud';
 import Home from '../components/Home';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../Context/AuthContext';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { addPostValidationSchema } from '../utils/Validation';
+
+
 
 const AddPost = () => {
   const { isAuthenticated } = useContext(AuthContext);
   const navigate = useNavigate();
   const { edit, id } = useParams(); 
-  const [isEditMode, setIsEditMode] = useState(edit === 'edit');
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [summary, setSummary] = useState('');
-  const [image, setImage] = useState('');
+  const isEditMode = edit === 'edit';
+
+  const { register, handleSubmit, setValue, formState: { errors } } = useForm({
+    resolver: yupResolver(addPostValidationSchema),
+  });
 
   useEffect(() => {
     if (isEditMode && id) {
       axios.get(`http://localhost:3001/660/posts/${id}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')} `
-          
         }
       })
         .then(response => {
           const { title, content, summary, image } = response.data;
-          setTitle(title);
-          setContent(content);
-          setSummary(summary);
-          setImage(image);
+          setValue('title', title);
+          setValue('content', content);
+          setValue('summary', summary);
+          setValue('image', image);
         })
         .catch(error => {
           console.error('Error fetching post data:', error);
@@ -49,15 +53,11 @@ const AddPost = () => {
           });
         });
     }
-  }, [isEditMode, id]);
+  }, [isEditMode, id, setValue]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
     const postData = { 
-      title, 
-      content, 
-      summary, 
-      image,
+      ...data,
       author: localStorage.getItem('userName'),
       userId: localStorage.getItem('userId'),
       createdAt: new Date().toISOString() 
@@ -105,19 +105,20 @@ const AddPost = () => {
       });
   };
 
-  return (
+  return ( isAuthenticated ? (
     <>
       <Home/>
       <Box sx={{marginTop: '64px' ,backgroundColor: 'white' ,width: '100%'}}>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, maxWidth: '400px', margin: '0 auto', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
           <Typography variant="h4">{isEditMode ? 'Edit Post' : 'Add New Post'}</Typography>
-          <form onSubmit={handleSubmit} style={{ width: '100%' }}>
+          <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%' }}>
             <TextField
               label="Title"
               variant="outlined"
               fullWidth
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
+              {...register('title')}
+              error={!!errors.title}
+              helperText={errors.title?.message}
               sx={{ backgroundColor: '#ddeef8', marginBottom: '10px' }}
             />
             <TextField
@@ -126,24 +127,27 @@ const AddPost = () => {
               multiline
               rows={4}
               fullWidth
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
+              {...register('content')}
+              error={!!errors.content}
+              helperText={errors.content?.message}
               sx={{ backgroundColor: '#ddeef8', marginBottom: '10px' }}
             />
             <TextField
               label="Summary"
               variant="outlined"
               fullWidth
-              value={summary}
-              onChange={(e) => setSummary(e.target.value)}
+              {...register('summary')}
+              error={!!errors.summary}
+              helperText={errors.summary?.message}
               sx={{ backgroundColor: '#ddeef8', marginBottom: '10px' }}
             />
             <TextField
               label="Image URL"
               variant="outlined"
               fullWidth
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
+              {...register('image')}
+              error={!!errors.image}
+              helperText={errors.image?.message}
               sx={{ backgroundColor: '#ddeef8', marginBottom: '10px' }}
             />
             <Button 
@@ -164,6 +168,8 @@ const AddPost = () => {
       </Box>
       <BotCloud/>
     </>
+  ) : navigate('/signin')
+  
   );
 };
 

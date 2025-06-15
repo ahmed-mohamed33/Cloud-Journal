@@ -22,7 +22,7 @@ const BlogList = () => {
       .get("http://localhost:3001/posts")
       .then((response) => setPosts(response.data))
       .catch((error) => console.error("Error fetching posts:", error));
-  }, []);
+  }, [posts]);
 
   const handleShare = async (id) => {
     try {

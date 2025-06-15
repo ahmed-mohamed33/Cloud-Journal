@@ -3,8 +3,6 @@ import Typography from '@mui/material/Typography';
 import { useParams } from 'react-router-dom';
 import { Box, Paper, Stack, TextField, Button, Container } from '@mui/material';
 import axios from 'axios';
-import react from '../assets/react.svg'
-import cloud from '../assets/cloud.svg'
 import Home from './Home';
 import BotCloud from './BotCloud';
 
@@ -14,14 +12,14 @@ const BlogPost = ({ theme }) => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
   const [username, setUsername] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Simulating user login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
   useEffect(() => {
     axios.get(`http://localhost:3001/posts/${id}`)
       .then(response => setPost(response.data))
       .catch(error => console.error('Error fetching post:', error));
 
-    // Fetch comments for the post
+ 
     axios.get(`http://localhost:3001/comments?postId=${id}`)
       .then(response => setComments(response.data))
       .catch(error => console.error('Error fetching comments:', error));
@@ -33,7 +31,7 @@ const BlogPost = ({ theme }) => {
         postId: id,
         content: newComment,
         username: isLoggedIn ? 'LoggedUser' : username || 'Anonymous',
-        userId: isLoggedIn ? 1 : null, // Assuming userId 1 for logged-in users
+        userId: isLoggedIn ? 1 : null, 
         isAnonymous: !isLoggedIn && !username
       };
       axios.post('http://localhost:3001/comments', comment)

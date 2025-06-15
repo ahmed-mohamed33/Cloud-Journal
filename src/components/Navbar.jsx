@@ -110,7 +110,7 @@ const Navbar = ({ theme }) => {
                                 <IconButton color="inherit">
                                     <SearchIcon />
                                 </IconButton>
-                                <IconButton color="inherit">
+                                <IconButton  color="inherit">
                                     <NotificationsIcon />
                                 </IconButton>
                                 <Button 

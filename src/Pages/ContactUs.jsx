@@ -1,9 +1,27 @@
 import React from 'react';
-import { Box, Typography, TextField, Button } from '@mui/material';
+import { Box, Typography, TextField, Button, Stack } from '@mui/material';
 import Home from '../components/Home';
 import BotCloud from '../components/BotCloud';
 
+
+import { toast } from 'react-toastify';
+
 const ContactUs = ({ theme }) => {
+  const handleSendMessage = () => {
+        toast.success('Message sent successfully!', {
+          position: "bottom-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          theme: "colored",
+          style: {
+            background: "#a0d4ee",
+            color: '#fff'
+          },
+          draggable: true,
+        });
+  }
   return ( 
     <>
     <Box sx={{backgroundColor: 'white ' ,width: '100%', height: '100px' }}/>
@@ -12,7 +30,7 @@ const ContactUs = ({ theme }) => {
     <Box sx={{  padding: '10px', color: '#fff', textAlign: 'center' ,width: '100%' }}>
     
       <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: '3rem' }}>
-        Cloud Journal
+        Contact Us
       </Typography>
       <Typography variant="body1">
         The world needs more real words.
@@ -43,6 +61,7 @@ const ContactUs = ({ theme }) => {
             sx={{ backgroundColor: '#ddeef8' }}
           />
           <Button 
+            onClick={handleSendMessage}
             variant="contained" 
             sx={{ 
               backgroundColor: '#171717',
@@ -53,6 +72,7 @@ const ContactUs = ({ theme }) => {
           >
             Send Message
           </Button>
+          
         </Box>
       </Box>
       

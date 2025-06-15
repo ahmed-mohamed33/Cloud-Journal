@@ -12,6 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import AddPost from './Pages/AddPost';
 import FloatingPostBtn from './components/FloatingPostBtn';
 import Projects from './Pages/Projects';
+import About from './Pages/About';
 
 const theme = createTheme({
   palette: {
@@ -103,9 +104,12 @@ function App() {
   <Route path="/signin" element={<SignInPage theme={theme}  />} />
   <Route path="/signup" element={<SignUpPage theme={theme} />} />
   <Route path="/addpost" element={<AddPost theme={theme}  />} />
+  <Route path="/about" element={<About theme={theme}  />} />
+
   <Route path="/addpost/:edit/:id" element={<AddPost theme={theme}  />} />
   <Route path="/projects" element={<Projects theme={theme} />} />
   <Route path="/contact" element={<ContactUs theme={theme} />} />
+
 </Routes>
 
 
