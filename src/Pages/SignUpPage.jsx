@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
-import Home from './Home';
-import BotCloud from './BotCloud';
+import Home from '../components/Home';
+import BotCloud from '../components/BotCloud';
 import { Link } from 'react-router-dom';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';

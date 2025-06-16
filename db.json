@@ -69,6 +69,16 @@
       "author": "Ahmed Selim",
       "createdAt": "2025-06-14T13:55:10.762Z",
       "userId": "1"
+    },
+    {
+      "title": "Ahmed Selim",
+      "content": "Front-End Developer | React.js | Next.js | Angular | JavaScript | ITI intern",
+      "summary": "The developer of this blog",
+      "image": "https://media.licdn.com/dms/image/v2/D4D03AQEdRsLjj9N9Lg/profile-displayphoto-shrink_800_800/B4DZcyMqleHwAc-/0/1748893871133?e=1755734400&v=beta&t=4_asNkzmUZL2aaWQsyETue6Z67dVeo_PfegZnp1gD6E",
+      "author": "ahmed mohamed",
+      "userId": "WL5na6K",
+      "createdAt": "2025-06-16T12:18:30.477Z",
+      "id": "aox1-Ub"
     }
   ],
   "users": [
@@ -114,7 +124,5 @@
       "id": "LV2bbNv"
     }
   ],
-  "comments": [
-   
-  ]
+  "comments": []
 }

@@ -26,7 +26,7 @@ const BlogList = () => {
 
   const handleShare = async (id) => {
     try {
-      await navigator.clipboard.writeText(`http://localhost:3000/post/${id}`);
+      await navigator.clipboard.writeText(`${window.location.origin}/post/${id}`);
       toast.success("Link copied to clipboard", {
         position: "bottom-right",
         autoClose: 3000,
