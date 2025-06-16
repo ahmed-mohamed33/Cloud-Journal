@@ -49,7 +49,7 @@ Cloud Journal is a web application designed to help users manage their notes and
    ```
 4. Start the JSON server (for mock API):
    ```bash
-   npm run server
+   npm run json-server
    ```
 5. Start the development server:
    ```bash
