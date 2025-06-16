@@ -56,6 +56,7 @@ const BlogList = () => {
   const handleEdit = (id, userId) => {
     if (localStorage.getItem("userId") === userId) {
       navigate(`/addpost/edit/${id}`);
+      
     } else {
       toast.error("Please login to edit post", {
         position: "bottom-right",

@@ -69,16 +69,6 @@
       "author": "Ahmed Selim",
       "createdAt": "2025-06-14T13:55:10.762Z",
       "userId": "1"
-    },
-    {
-      "title": "dsaddsasdasd",
-      "content": "asdasdasdsadsa",
-      "summary": "sadasdsadsad",
-      "image": "https://github.com/ahmed-mohamed33",
-      "author": "ahmed mohamed",
-      "userId": "WL5na6K",
-      "createdAt": "2025-06-15T18:53:29.820Z",
-      "id": "S4vx5hd"
     }
   ],
   "users": [
@@ -125,61 +115,6 @@
     }
   ],
   "comments": [
-    {
-      "id": "1",
-      "postId": 1,
-      "content": "Great post!",
-      "username": "Alice",
-      "userId": 1,
-      "isAnonymous": false
-    },
-    {
-      "id": "2",
-      "postId": 1,
-      "content": "Very informative.",
-      "username": "Anonymous",
-      "userId": null,
-      "isAnonymous": true
-    },
-    {
-      "id": "d047",
-      "postId": "1",
-      "content": "gh",
-      "username": "Anonymous",
-      "userId": null,
-      "isAnonymous": true
-    },
-    {
-      "id": "e44c",
-      "postId": "4",
-      "content": "ahmed",
-      "username": "Ahmed",
-      "userId": null,
-      "isAnonymous": false
-    },
-    {
-      "postId": "5",
-      "content": "gamed",
-      "username": "Anonymous",
-      "userId": null,
-      "isAnonymous": true,
-      "id": "1EPOFHt"
-    },
-    {
-      "postId": "5",
-      "content": "gamed awy",
-      "username": "Ahmed",
-      "userId": null,
-      "isAnonymous": false,
-      "id": "jaaDLZh"
-    },
-    {
-      "postId": "5",
-      "content": "gamed gedn",
-      "username": "ahmed",
-      "userId": null,
-      "isAnonymous": false,
-      "id": "3-kZRcC"
-    }
+   
   ]
 }

@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Typography from '@mui/material/Typography';
 import { useParams } from 'react-router-dom';
 import { Box, Paper, Stack, TextField, Button, Container } from '@mui/material';
 import axios from 'axios';
 import Home from './Home';
 import BotCloud from './BotCloud';
+import { AuthContext } from '../Context/AuthContext';
 
 const BlogPost = ({ theme }) => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
-  const [username, setUsername] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const { userName, setUserName, isAuthenticated, userId } = useContext(AuthContext);
+ 
 
   useEffect(() => {
     axios.get(`http://localhost:3001/posts/${id}`)
@@ -30,15 +31,15 @@ const BlogPost = ({ theme }) => {
       const comment = {
         postId: id,
         content: newComment,
-        username: isLoggedIn ? 'LoggedUser' : username || 'Anonymous',
-        userId: isLoggedIn ? 1 : null, 
-        isAnonymous: !isLoggedIn && !username
+        username: isAuthenticated ? userName : (userName || 'Anonymous'),
+        userId: isAuthenticated ? userId : null, 
+        isAnonymous: !isAuthenticated && !userName
       };
       axios.post('http://localhost:3001/comments', comment)
         .then(response => {
           setComments([...comments, response.data]);
           setNewComment('');
-          setUsername('');
+          setUserName('');
         })
         .catch(error => console.error('Error adding comment:', error));
     }
@@ -81,13 +82,13 @@ const BlogPost = ({ theme }) => {
             <strong>{comment.isAnonymous ? 'Anonymous' : comment.username}:</strong> {comment.content}
           </Typography>
         ))}
-        {!isLoggedIn && (
+        {!isAuthenticated && (
           <TextField
             label="Your Name (optional)"
             variant="outlined"
             fullWidth
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
             sx={{ marginTop: 2 }}
           />
         )}
