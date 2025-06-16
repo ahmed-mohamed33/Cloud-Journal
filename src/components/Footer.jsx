@@ -31,9 +31,9 @@ const Footer = () => (
             </a>
           </Stack>
         <Box sx={{ display: 'flex', justifyContent: 'center', gap: '5px', marginTop: '5px' }}>
-          <a href="/terms" style={{ color: '#fff' }}>Terms of Use</a>
-          <a href="/privacy" style={{ color: '#fff' }}>Privacy Policy</a>
-          <a href="/code" style={{ color: '#fff' }}>Code of Conduct</a>
+          <a href="#" style={{ color: '#fff' }}>Terms of Use</a>
+          <a href="#" style={{ color: '#fff' }}>Privacy Policy</a>
+          <a href="#" style={{ color: '#fff' }}>Code of Conduct</a>
         </Box>
       
       </Box>
