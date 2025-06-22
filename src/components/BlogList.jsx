@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import { Link } from "react-router-dom";
-import react from "../assets/react.svg";
+import holdercloudbottom from "../assets/holdercloudbottom.svg";
 import { Box, Container, Grid, Stack } from "@mui/material";
 import PostCard from "./PostCard";
 import axios from "axios";
-import cloud from "../assets/cloud.svg";
 import Home from "./Home";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Loading from "./Loading";
 
-const BlogList = () => {
+
+const BlogList = ({ theme }) => {
   const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
 
@@ -26,7 +24,9 @@ const BlogList = () => {
 
   const handleShare = async (id) => {
     try {
-      await navigator.clipboard.writeText(`${window.location.origin}/post/${id}`);
+      await navigator.clipboard.writeText(
+        `${window.location.origin}/post/${id}`
+      );
       toast.success("Link copied to clipboard", {
         position: "bottom-right",
         autoClose: 3000,
@@ -56,7 +56,6 @@ const BlogList = () => {
   const handleEdit = (id, userId) => {
     if (localStorage.getItem("userId") === userId) {
       navigate(`/addpost/edit/${id}`);
-      
     } else {
       toast.error("Please login to edit post", {
         position: "bottom-right",
@@ -113,6 +112,10 @@ const BlogList = () => {
     }
   };
 
+  if (posts.length === 0) return (
+    <Loading/>
+  );
+
   return (
     <>
       <Home />
@@ -146,6 +149,7 @@ const BlogList = () => {
                 onShare={handleShare}
                 onEdit={handleEdit}
                 onDelete={handleDelete}
+                theme={theme}
               />
             ))}
           </Grid>
@@ -164,7 +168,7 @@ const BlogList = () => {
             p: 0,
           }}
           alt="wave"
-          src={react}
+          src={holdercloudbottom}
         />
       </List>
     </>

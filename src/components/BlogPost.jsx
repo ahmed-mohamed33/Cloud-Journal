@@ -6,6 +6,7 @@ import axios from 'axios';
 import Home from './Home';
 import BotCloud from './BotCloud';
 import { AuthContext } from '../Context/AuthContext';
+import Skeleton from '@mui/material/Skeleton';
 
 const BlogPost = ({ theme }) => {
   const { id } = useParams();
@@ -13,7 +14,7 @@ const BlogPost = ({ theme }) => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
   const { userName, setUserName, isAuthenticated, userId } = useContext(AuthContext);
- 
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     axios.get(`http://localhost:3001/posts/${id}`)
@@ -45,7 +46,19 @@ const BlogPost = ({ theme }) => {
     }
   };
 
-  if (!post) return <Typography variant="h6">Post not found</Typography>;
+ if (!post) return (
+    <>
+    <Home/>
+    <Box sx={{ padding: 2 ,backgroundColor: 'white', width: '100%', marginTop: '64px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+    <Skeleton variant="text" width={210} height={40} />
+      <Skeleton variant="rectangular" width="75%" height={500} sx={{ marginTop: 2, borderRadius: '10px' }} />
+      <Skeleton variant="text" width={210} height={40} sx={{justifySelf: 'start',alignSelf: 'start'}} />
+
+      <Skeleton variant="text" width="100%" height={100}  />
+    </Box>
+    <BotCloud/>
+    </>
+  );
 
   return (
    <>
@@ -66,7 +79,7 @@ const BlogPost = ({ theme }) => {
      
 
       
-      <img src={post.image}  alt="post image"  style={{ width: '75%', borderRadius: '10px',boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)',objectFit: 'cover', objectPosition: 'center'}} />
+      <img src={ post.image} onError={() => setImageError(true)} alt="post image"  style={{ width: '75%', borderRadius: '10px',boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)',objectFit: 'cover', objectPosition: 'center' ,display: imageError ? 'none' : 'block'}} />
      <Container >
       <Typography variant="body1">
         {post.content}

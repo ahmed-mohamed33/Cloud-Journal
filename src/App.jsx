@@ -90,37 +90,26 @@ const theme = createTheme({
 
 function App() {
   return (
-    
     <ThemeProvider theme={theme}>
        <CssBaseline/>
     <Router>
-     
     <Navbar theme={theme}/>
-
-
     <Routes>
-  <Route path="/" element={<BlogList   />} />
+    <Route path="/" element={<BlogList theme={theme} />} />
   <Route path="/post/:id" element={<BlogPost theme={theme} />} />
   <Route path="/signin" element={<SignInPage theme={theme}  />} />
   <Route path="/signup" element={<SignUpPage theme={theme} />} />
   <Route path="/addpost" element={<AddPost theme={theme}  />} />
   <Route path="/about" element={<About theme={theme}  />} />
-
   <Route path="/addpost/:edit/:id" element={<AddPost theme={theme}  />} />
   <Route path="/projects" element={<Projects theme={theme} />} />
   <Route path="/contact" element={<ContactUs theme={theme} />} />
-
 </Routes>
-
-
 <FloatingPostBtn /> 
 </Router>
 <Footer />
 <ToastContainer />
 </ThemeProvider>
-
-
-
   )
 }
 

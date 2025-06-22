@@ -50,7 +50,6 @@
       "author": "Ahmed Selim",
       "userId": "1"
     },
-    
     {
       "title": "Ahmed Selim",
       "content": "Front-End Developer | React.js | Next.js | Angular | JavaScript | ITI intern",
@@ -60,10 +59,19 @@
       "userId": "WL5na6K",
       "createdAt": "2025-06-16T12:23:53.096Z",
       "id": "aox1-Ub"
+    },
+    {
+      "title": "dzccdzc",
+      "content": "zdczdczdcdsfdsfsdfdsfdsfdf",
+      "summary": "dzczddsfsdfsdfsdf",
+      "image": "https://mui.com/material-ui/react-progress/",
+      "author": "Ahmed Selim",
+      "userId": "viIFD8y",
+      "createdAt": "2025-06-20T01:37:50.229Z",
+      "id": "smVpNGO"
     }
   ],
   "users": [
- 
     {
       "email": "a7medselim93@gmail.com",
       "password": "$2a$10$MinVnGdMAM.Fcg29cO67luRyUlLK/zDu90DzBTIJauXe.WIXn6De.",
@@ -99,7 +107,30 @@
       "password": "$2a$10$FScJjLJRrS/DnTwN1pC1JuhFhjJUNQMPUkudBKm.54mfgqtL4Z5r2",
       "name": "test",
       "id": "LV2bbNv"
+    },
+    {
+      "email": "AhmedSelim@example.com",
+      "password": "$2a$10$qIuKCf13eFUWz/Jdcl4/FOvU2TrqMfgATedjOJIgihO2Lecd2t/bW",
+      "name": "Ahmed Selim",
+      "id": "viIFD8y"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "postId": "6",
+      "content": "7beby",
+      "username": "ahmed selim",
+      "userId": null,
+      "isAnonymous": false,
+      "id": 1
+    },
+    {
+      "postId": "6",
+      "content": "ahmed",
+      "username": "Anonymous",
+      "userId": null,
+      "isAnonymous": true,
+      "id": 2
+    }
+  ]
 }
