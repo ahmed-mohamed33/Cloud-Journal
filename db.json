@@ -61,14 +61,14 @@
       "id": "aox1-Ub"
     },
     {
-      "title": "dzccdzc",
-      "content": "zdczdczdcdsfdsfsdfdsfdsfdf",
-      "summary": "dzczddsfsdfsdfsdf",
-      "image": "https://mui.com/material-ui/react-progress/",
-      "author": "Ahmed Selim",
-      "userId": "viIFD8y",
-      "createdAt": "2025-06-20T01:37:50.229Z",
-      "id": "smVpNGO"
+      "title": "Earthquakes",
+      "content": "Earthquakes are one of nature’s most powerful and unpredictable forces. They strike without warning, often leaving devastation in their wake. But what exactly causes an earthquake? How do they impact our world? And more importantly, how can we stay prepared?\n\nIn this post, we'll break down the science behind earthquakes, their global impact, and practical tips on how to stay safe when the ground begins to shake.\n\n🌍 What Is an Earthquake?\nAn earthquake is the sudden shaking of the ground caused by movements along cracks (called faults) in the Earth’s crust. These movements occur when energy stored in the Earth’s crust is suddenly released, usually because of tectonic plates grinding against each other.\n\nThe point inside the Earth where the earthquake begins is called the focus, while the point directly above it on the surface is known as the epicenter.\n\n🌀 What Causes Earthquakes?\nMost earthquakes are caused by:\n\nTectonic plate movement: The Earth's crust is divided into large plates that constantly move. When they collide, pull apart, or slide past each other, stress builds up and is eventually released as an earthquake.\n\nVolcanic activity: Sometimes, magma movement beneath volcanoes can trigger earthquakes.\n\nHuman activity: Mining, drilling, or large construction projects can occasionally cause small, localized earthquakes.\n\n📈 How Are Earthquakes Measured?\nEarthquakes are measured by:\n\nMagnitude: This tells us how much energy was released. It’s measured on the Richter scale or more commonly now, the Moment Magnitude Scale (Mw).\n\nIntensity: This describes the effects and damage on the surface, often using the Modified Mercalli Intensity (MMI) scale.\n\nFor example, a magnitude 4.0 quake might feel like a heavy truck passing by, while a 7.0 quake can collapse buildings.\n\n🧭 Where Do Earthquakes Happen Most?\nEarthquakes can happen anywhere, but they are most common in areas where tectonic plates meet. This includes:\n\nThe Ring of Fire (surrounding the Pacific Ocean)\n\nThe Himalayas\n\nThe San Andreas Fault in California\n\nParts of Turkey, Iran, and Indonesia\n\n🏚️ What Are the Effects of Earthquakes?\nGround shaking and surface rupture\n\nBuilding damage or collapse\n\nLandslides and tsunamis (if underwater)\n\nFires caused by broken gas lines\n\nEconomic losses and human casualties\n\n🛡️ How to Stay Safe During an Earthquake\nBefore:\n\nSecure heavy furniture and shelves.\n\nKnow where safe spots are (under sturdy tables, against interior walls).\n\nPrepare an emergency kit with food, water, flashlight, and first aid.\n\nDuring:\n\nDrop, Cover, and Hold On!\n\nStay away from windows or anything that might fall.\n\nIf you’re outdoors, move to an open area away from buildings.\n\nAfter:\n\nCheck for injuries or damage.\n\nExpect aftershocks.\n\nListen to emergency broadcasts and follow instructions.\n\n\n",
+      "summary": "Earthquakes",
+      "image": "https://img.freepik.com/premium-photo/urban-earthquake-disaster-generative-ai_431161-20470.jpg",
+      "author": "ahmed mohamed",
+      "userId": "dOGUtAI",
+      "createdAt": "2025-06-22T16:54:27.833Z",
+      "id": "abuEyes"
     }
   ],
   "users": [
@@ -113,6 +113,24 @@
       "password": "$2a$10$qIuKCf13eFUWz/Jdcl4/FOvU2TrqMfgATedjOJIgihO2Lecd2t/bW",
       "name": "Ahmed Selim",
       "id": "viIFD8y"
+    },
+    {
+      "email": "emailexample@emailexample.com",
+      "password": "$2a$10$iucIic/KTVlNUvFGSFm7GOAJ8RK2k32pX/zNGYQzQOnpd60dcnj4O",
+      "name": "Ahmed selim",
+      "id": "_zEAiK-"
+    },
+    {
+      "email": "emailexampl@emailexample.com",
+      "password": "$2a$10$Ec9ZQB4kwG0gRx6IUI5i4u1Poh.oQxGbk5fYpValJ3bNHwh8hpsgG",
+      "name": "Ahmed selim",
+      "id": "ncjjSLS"
+    },
+    {
+      "email": "a7medselim94@gmail.com",
+      "password": "$2a$10$u9EmuX6/kYdmZndcP1GCauJI6IhUdUrvzv8Qd0eUT2Onnv8.H/nI6",
+      "name": "ahmed mohamed",
+      "id": "dOGUtAI"
     }
   ],
   "comments": [
@@ -131,6 +149,54 @@
       "userId": null,
       "isAnonymous": true,
       "id": 2
+    },
+    {
+      "postId": "2",
+      "content": "Nice post",
+      "username": "Ahmed Selim",
+      "userId": null,
+      "isAnonymous": false,
+      "id": 3
+    },
+    {
+      "postId": "2",
+      "content": "very nice",
+      "username": "Anonymous",
+      "userId": null,
+      "isAnonymous": true,
+      "id": 4
+    },
+    {
+      "postId": "2",
+      "content": "nice content",
+      "username": "Anonymous",
+      "userId": null,
+      "isAnonymous": true,
+      "id": 5
+    },
+    {
+      "postId": "2",
+      "content": "very nice",
+      "username": "Anonymous",
+      "userId": null,
+      "isAnonymous": true,
+      "id": 6
+    },
+    {
+      "postId": "7dp7cei",
+      "content": "nice",
+      "username": "",
+      "userId": "_zEAiK-",
+      "isAnonymous": false,
+      "id": 7
+    },
+    {
+      "postId": "2",
+      "content": "nice",
+      "username": "Anonymous",
+      "userId": null,
+      "isAnonymous": true,
+      "id": 8
     }
   ]
 }
